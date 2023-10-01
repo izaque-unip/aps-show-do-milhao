@@ -1,22 +1,27 @@
-import java.awt.LayoutManager;
+import javax.swing.*;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+
 
 public class Menu extends Janela {
 
     public Menu() {
-        super("Menu", 500, 500, JFrame.EXIT_ON_CLOSE);
+        super("Menu", -1, -1, 500, 500, JFrame.EXIT_ON_CLOSE);
     }
 
     @Override
     protected void setupComponents() {
-        // Use um layout manager, por exemplo, FlowLayout
+    	setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLayout(null);
 
-        JLabel ola = new JLabel("OLá mundo, teste java");
-        ola.setSize(getPreferredSize());
-        ola.setLocation(10, 40);
-        add(ola);
+        JLabel um = new JLabel("1");
+        JLabel dois = new JLabel("2");
+        JLabel tres = new JLabel("3");
+        JLabel quatro = new JLabel("4");
+        JLabel cinco = new JLabel("5");
+        JLabel seis = new JLabel("6");
+        
+        addCirculo(um, dois, tres, quatro, cinco, seis);
+        
+        
     }
 }
